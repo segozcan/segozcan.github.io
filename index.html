@@ -1,4 +1,90 @@
----
-layout: home
-title: Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Blog</title>
+  <style>
+    /* Basic styling for the body */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Styling for the navigation bar */
+    .navbar {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Style for your name */
+    .navbar .name {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    /* Styling for the tabs */
+    .navbar .tabs {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar .tabs li {
+      display: inline;
+      margin-left: 20px;
+    }
+
+    .navbar .tabs li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+    .navbar .tabs li a:hover {
+      background-color: #575757;
+    }
+
+    /* Container for content */
+    .content {
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <div class="navbar">
+    <div class="name">Your Name</div>
+    <ul class="tabs">
+      <li><a href="#personal">Personal</a></li>
+      <li><a href="#tech">Tech/Professional</a></li>
+    </ul>
+  </div>
+
+  <!-- Content sections -->
+  <div class="content">
+    <!-- Personal Tab Content -->
+    <section id="personal">
+      <h2>Personal</h2>
+      <p>Welcome to the personal section of my blog! Here, I'll share my thoughts, hobbies, and life experiences.</p>
+    </section>
+
+    <!-- Tech/Professional Tab Content -->
+    <section id="tech">
+      <h2>Tech/Professional</h2>
+      <p>This section is all about my professional work, including my technical projects, articles, and tutorials.</p>
+    </section>
+  </div>
+
+</body>
+</html>

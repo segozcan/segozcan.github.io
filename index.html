@@ -57,6 +57,12 @@
     /* Container for content */
     .content {
       padding: 20px;
+      display: none; /* Hidden by default */
+    }
+
+    /* Style for the visible content */
+    .content.active {
+      display: block; /* Show active content */
     }
   </style>
 </head>
@@ -66,25 +72,36 @@
   <div class="navbar">
     <div class="name">segozcan</div>
     <ul class="tabs">
-      <li><a href="#personal">Personal</a></li>
-      <li><a href="#tech">Professional</a></li>
+      <li><a href="javascript:void(0)" onclick="showContent('personal')">Personal</a></li>
+      <li><a href="javascript:void(0)" onclick="showContent('tech')">Professional</a></li>
     </ul>
   </div>
 
   <!-- Content sections -->
-  <div class="content">
-    <!-- Personal Tab Content -->
-    <section id="personal">
-      <h2>Personal</h2>
-      <p>Welcome to the personal section of my blog! Here, I'll share my thoughts, hobbies, and life experiences.</p>
-    </section>
-
-    <!-- Tech/Professional Tab Content -->
-    <section id="tech">
-      <h2>Professional</h2>
-      <p>This section is all about my professional work, including my technical projects, articles, and tutorials.</p>
-    </section>
+  <div id="personal" class="content active">
+    <h2>Personal</h2>
+    <p>Welcome to the personal section of my blog! Here, I'll share my thoughts, hobbies, and life experiences.</p>
   </div>
+
+  <div id="tech" class="content">
+    <h2>Professional</h2>
+    <p>This section is all about my professional work, including my technical projects, articles, and tutorials.</p>
+  </div>
+
+  <!-- JavaScript to toggle the content visibility -->
+  <script>
+    function showContent(sectionId) {
+      // Hide all content sections
+      var contents = document.querySelectorAll('.content');
+      contents.forEach(function(content) {
+        content.classList.remove('active');
+      });
+
+      // Show the selected content section
+      var selectedContent = document.getElementById(sectionId);
+      selectedContent.classList.add('active');
+    }
+  </script>
 
 </body>
 </html>

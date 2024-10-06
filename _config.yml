@@ -13,6 +13,10 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 title:		           "segozcan"
 description:	       "a personal/slightly professional blog"
 author:              "Selin Ezgi Özcan"
+email: segozcan.aux@example.com
+baseurl: "" # leave this as empty for your GitHub Pages site
+url: "https://segozcan.github.io" # your GitHub Pages URL
+github_username: segozcan
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
